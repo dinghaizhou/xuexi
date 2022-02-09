@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>我的demo</title>
+    <style>
+      body {
+        font-family: Menlo, Consolas, monospace;
+        color: #444;
+      }
+      .item {
+        cursor: pointer;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      ul {
+        padding-left: 1em;
+        line-height: 1.5em;
+        list-style-type: dot;
+      }
+    </style>
+    <!-- Delete ".min" for console warnings in development -->
+    <script src="../../dist/vue.js"></script>
+  </head>
+  <body>
+    <ul id="app">
+      {{msg}}
+    </ul>
+  </body>
+  <script>
+    // start app
+    new Vue({
+      el: "#app",
+      data: {
+        msg: "haizhou",
+        num: 1,
+      },
+      mounted() {
+        console.log(111);
+        this.msg = "haizhou1";
+        this.msg = "haizhou2";
+        this.msg = "haizhou3";
+      },
+    });
+  </script>
+</html>
