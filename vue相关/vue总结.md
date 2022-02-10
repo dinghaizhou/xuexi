@@ -24,4 +24,10 @@ watch 是用来观察某个属性的变化。从而进行相应的操作。
     遍历watcher，watcher.update()， 触发更新。
 
 
-### vue3 响应式原理
+#### vue3 proxy响应式原理的优点
+1. proxy可以代理整个对象，不用遍历所有的key
+2. proxy可以代理数组，不需要改写数组的其中方法
+3. proxy可以监听新增的属性和删除属性
+4. proxy 是运行时才会监听，没用的属性不监听，性能优化。
+5. proxy 收集依赖使用的是一个weakMap结构，储存所有的target、key、依赖。
+
