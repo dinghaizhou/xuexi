@@ -345,6 +345,7 @@ export function callHook (vm: Component, hook: string) {
     }
   }
   if (vm._hasHookEvent) {
+    //callhook 会派发hook事件
     vm.$emit('hook:' + hook)
   }
   popTarget()

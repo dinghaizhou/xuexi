@@ -250,6 +250,8 @@ function createComputedGetter (key) {
   return function computedGetter () {
     const watcher = this._computedWatchers && this._computedWatchers[key]
     if (watcher) {
+        // 如果dirty为ture，则会重新计算值，并把dirty改为false。
+        // 以来发生变化的时候dirty 改为 true。
       if (watcher.dirty) {
         watcher.evaluate()
       }
