@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            .button {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background:coral;
+                text-align: center;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 4s background, 1s 4s width, 1s 4s height;
+            }
+            .text {
+                height: 40px;
+                width: 40px;
+                /* background: red; */
+                border-radius: 50%;
+                line-height: 40px;
+            }
+
+            .rotate {
+                animation: 1s proRotate 1s;
+            }
+
+            @keyframes proRotate { 
+                0%{ transform:rotateY(0deg);} 
+                100%{ transform:rotateY(180deg);} 
+            }
+
+            @keyframes lala { 
+                0%{ transform:rotateY(0px);} 
+                100%{ transform:rotateY(-180deg);} 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="test_wrap">
+            <div id="btn" class="button" @click="">
+                <div class="text">开</div>   
+            </div>
+            <div onclick="handleclick()">
+                点击
+            </div>
+        </div>
+    </body>
+    <script>
+        function handleclick() {
+            btn.classList.add('rotate');
+            setTimeout(() => {
+                btn.classList.remove('rotate');
+            }, 2000)
+        }
+    </script>
+</html>
