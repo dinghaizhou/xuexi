@@ -41,9 +41,7 @@ var merge2 = function(nums1, m, nums2, n) {
         nums1Copy[p1 + p2 -1] = smallNum;
     }
 
-    for(let i = 0; i < m + n; i++) {
-        nums1[i] = nums1Copy[i];
-    }
+    return nums1Copy
 };
 
 
@@ -67,6 +65,40 @@ var merge3 = function(nums1, m, nums2, n) {
 };
 
 
-merge2(nums1, 3, [2,5,6], 3);
-console.log(nums1);
+// merge2(nums1, 3, [2,5,6], 3);
+
+
+// 找出两个升序数组中的 第 i 小的值 
+
+function findSmall(arr1, arr2, val) {
+    let num = 0;
+    let p1 = 0;
+    let p2 = 0;
+
+    while(p1 < arr1.length || p2 < arr2.length) {
+        let flag = 1
+        if(p1 === arr1.length) {
+            p2++;
+            flag = 2;
+        } else if (p2 === arr2.length) {
+            p1++;
+            flag = 1;
+        } else {
+            if (arr1[p1] > arr2[p2]) {
+                p2++;
+                flag = 2;
+            } else {
+                p1++
+                flag = 1;
+            }
+        }
+        num++;
+        if (num === val) {
+            return [flag, flag === 1 ? p1-- : p2 --]
+        }
+    }
+    return 'not found'
+}
+
+console.log(findSmall([1,3,5], [2,4,5], 6))
 
