@@ -23,7 +23,7 @@ function compose(arr) {
         return res;
     }
 
-    return arr.reduce((a,b) => composeTwo(a, b));
+    return arr.reduce((a,b) => composeTwo(a, b), []);
 }
 
 console.log(compose([[ 'Aa', 'Ab', 'Ba', 'Bb' ], [1, 2, 3, 4]]));

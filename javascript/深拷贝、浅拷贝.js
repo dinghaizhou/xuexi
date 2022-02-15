@@ -82,17 +82,17 @@ function deepClone(data, hash = new WeakMap()) {
     // 新的引用对象
     let newData = Array.isArray(data) ? [] : {};
 
-    // 存储当前对应关系,循环引用。
-    hash.set(data, newData);
+    // // 存储当前对应关系,循环引用。
+    // hash.set(data, newData);
 
     for (let i in data) {
         if(data.hasOwnProperty(i)) {
-            if(hash.has(data[i])) {
-                console.log(true);
-                newData[i] = hash.get(data[i]);
-            } else {
+            // if(hash.has(data[i])) {
+            //     console.log(true);
+            //     newData[i] = hash.get(data[i]);
+            // } else {
                 newData[i] = deepClone(data[i], hash);
-            }
+            // }
         }
     }
     return newData

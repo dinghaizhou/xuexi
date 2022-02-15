@@ -62,7 +62,7 @@ function test3() {
 
     s();
 }
-// test3();
+test3();
 
 function test4() {
     console.log(a);
@@ -106,6 +106,6 @@ function test6() {
     }
 }
 
-test5()
+// test5()
 
 

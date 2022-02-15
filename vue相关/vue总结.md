@@ -31,3 +31,13 @@ watch 是用来观察某个属性的变化。从而进行相应的操作。
 4. proxy 是运行时才会监听，没用的属性不监听，性能优化。
 5. proxy 收集依赖使用的是一个weakMap结构，储存所有的target、key、依赖。
 
+
+#### 组件通信
+1. props  
+2. $on/$emit
+3. Vue.prototype.$eventbus = new Vue()
+4. vuex
+5. $root
+6. $parents
+7. $children
+

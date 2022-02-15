@@ -25,7 +25,6 @@ console.log('dong' in obj);
  * Object.keys() 可枚举的、非原型
  * Object.getOwnPropertyNames(obj)  对象自身的所有属性（包含不可枚举属性）
  *
- * 
  */
 
 /**

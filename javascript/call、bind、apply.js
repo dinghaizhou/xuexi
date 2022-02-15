@@ -40,12 +40,10 @@ Function.prototype._bind = function(context, ...args) {
     var func = this.__bind__ || this;
     var returnFunc = function() {
         args = args.concat(Array.prototype.slice.call(arguments))
-        console.log(context);
-        console.log(this instanceof returnFunc);
         return func.apply(this instanceof returnFunc ? this : context, args)
     }
     // 储存初始fn函数
-    // returnFunc.__bind__ = func;
+    returnFunc.__bind__ = func;
     returnFunc.prototype = func.prototype
 
     return returnFunc
