@@ -8,7 +8,6 @@ import card from './components/card'
 Vue.use(dialog);
 Vue.component('hz-card', card)
 
-console.log('router', router)
 new Vue({
     el: '#app',
     render: h => h(App),
