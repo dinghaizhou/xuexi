@@ -9,3 +9,5 @@
 * vuex
 * $roots
 * $parents
+
+#### 函数式组件

@@ -5,6 +5,7 @@ import Vue from "vue";
 import Router from '@src/views/router';
 const Home = () => import(/* webpackChunkName: "home" */ '@src/views/home')
 const Communication = () => import(/* webpackChunkName: "Communication" */ '@src/views/Communication')
+const FunctionalComp = () => import(/* webpackChunkName: "Communication" */ '@src/views/FunctionalComp')
 // 安装路由插件
 Vue.use(VueRouter);
 
@@ -25,6 +26,11 @@ let routes = [
         path: '/comunicaiton',
         title: '组件通信',
         component: Communication
+    },
+    {
+        path: '/functional',
+        title: '组件通信',
+        component: FunctionalComp
     },
     {
         path: '/', 
