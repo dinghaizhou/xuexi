@@ -14,9 +14,12 @@ class Promise {
         
     }
     then(fn) {
-
+        
     }
     catch(fn) {
         
     }
 }
+
+
+// new Promise((resolve, reject) => {}).then().catch()

@@ -1,9 +1,5 @@
-export function square(x) {
-    console.log('squaring')
-    return x * x;
-}
+import { square } from "./test";
 
 export function cube(x) {
-    console.log('cubing')
-    return x * x * x;
+    return x * square(x);
 }

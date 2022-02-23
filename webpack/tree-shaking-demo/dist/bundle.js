@@ -1,36 +1,44 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
+/******/ 	var __webpack_modules__ = ([
+/* 0 */,
+/* 1 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => 
+{
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "cube": () => (/* binding */  cube)
+/* harmony export */ });
 
-eval("/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./math.js */ \"./src/math.js\");\n\n\nfunction component() {\n    const element = document.createElement('pre');\n\n    element.innerHTML = [\n        'Hello webpack!',\n        '5 cubed is equal to ' + (0,_math_js__WEBPACK_IMPORTED_MODULE_0__.cube)(5)\n    ].join('\\n\\n');\n\n    return element;\n}\n\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack://tree-shaking-demo/./src/index.js?");
+/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+
+
+function cube(x) {
+    return x * (0,_test__WEBPACK_IMPORTED_MODULE_0__.square)(x);
+}
 
 /***/ }),
 
-/***/ "./src/math.js":
-/*!*********************!*\
-  !*** ./src/math.js ***!
-  \*********************/
+
+
+/* 2 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"cube\": () => (/* binding */ cube)\n/* harmony export */ });\n/* unused harmony export square */\nfunction square(x) {\n    console.log('squaring')\n    return x * x;\n}\n\nfunction cube(x) {\n    console.log('cubing')\n    return x * x * x;\n}\n\n//# sourceURL=webpack://tree-shaking-demo/./src/math.js?");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "add": () => (/* binding */ add),
+/* harmony export */   "square": () => (/* binding */ square)
+/* harmony export */ });
+function add(a, b) {
+    return a + b;
+}
+
+function square(x) {
+    console.log('squaring')
+    return x * x;
+}
 
 /***/ })
-
-/******/ 	});
+/******/ 	]);
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
@@ -75,11 +83,28 @@ eval("/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harm
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _test_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+
+
+
+function component() {
+    const element = document.createElement('pre');
+
+    element.innerHTML = [
+        'Hello webpack!',
+        '5 cubed is equal to ' + (0,_math_js__WEBPACK_IMPORTED_MODULE_0__.cube)(5),
+        (0,_test_js__WEBPACK_IMPORTED_MODULE_1__.add)(2,3)
+    ].join('\n\n');
+
+    return element;
+}
+
+document.body.appendChild(component());
+})();
+
 /******/ })()
 ;
