@@ -30,9 +30,15 @@ let routes = [
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         path: '/form',
         title: '组件通信',
         component: From
+=======
+        path: '/functional',
+        title: '组件通信',
+        component: FunctionalComp
+>>>>>>> 7ca9108042455daa02eafb48e3461bb859a571ff
 =======
         path: '/functional',
         title: '组件通信',
