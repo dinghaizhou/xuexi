@@ -15,3 +15,6 @@
 * $listeners 子组件通过v-on="$listensers", 处理父元素传进来的时间
 
 #### 
+* $parents
+
+#### 函数式组件

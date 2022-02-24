@@ -5,6 +5,7 @@
             <router-link tag="li" to="/router">路由</router-link>
             <router-link tag="li" to="/comunicaiton">组件通信</router-link>
             <router-link tag="li" to="/form">表单组件</router-link>
+            <router-link tag="li" to="/functional">函数式组件</router-link>
         </ul>
         <div class="right">
             <router-view></router-view>
