@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
 export default {
     props: {},
     data() {
@@ -13,10 +12,15 @@ export default {
     },
     computed: {
     },
-    created() {},
+    created() {
+        this.$parent.$on('child1', (val) => {
+            console.log(val)
+        })
+    },
     mounted() {},
     methods: {}
 };
 </script>
+
 <style lang="stylus" scoped>
 </style>

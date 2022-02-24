@@ -6,19 +6,29 @@
 
 <script>
 export default {
-    props: {},
-    data() {
-        return {};
-    },
-    components: {},
-    computed: {},
-    created() {},
-    mounted() {
-       
-    },
-    methods: {}
+  inject: {
+      bar: 'foo'
+  },
+  components: {},
+  props: {},
+
+  data() {
+      return {};
+  },
+
+  computed: {},
+  created() {
+      console.log(this.bar)
+  },
+
+  mounted() {
+     
+  },
+
+  methods: {}
 };
 </script>
+
 <style lang="less">
     .border {
         padding: 10px;

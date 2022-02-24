@@ -1,37 +1,45 @@
 <template>
-    <div> 
+    <div>
         组件通信
-        <Child1 id="name" @click="handleClick"></Child1>
+        <Child1 id="name" msg="hello" @click="handleClick"></Child1>
+
         <Child2></Child2>
     </div>
 </template>
 
 <script>
-import Child1 from './Child1.vue'
-import Child2 from './Child2.vue'
+import Child1 from "./Child1.vue";
+import Child2 from "./Child2.vue";
 export default {
-    props: {},
-    data() {
-        return {};
+    provide: {
+        foo: 'foo'
     },
     components: {
         Child1,
-        Child2
+        Child2,
     },
-    computed: {
+    props: {},
+
+    data() {
+        return {};
     },
-    created() {
-    },
+
+    computed: {},
+
+    created() {},
+
     mounted() {
-        console.log(this)
+        console.log(this);
     },
+
     methods: {
         handleClick() {
-
-        }
-    }
+            console.log(111);
+        },
+    },
 };
 </script>
+
 <style lang="less">
 .main {
 }

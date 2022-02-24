@@ -4,8 +4,14 @@
 #### 组件通信
 * 父传子 props
 * 子传父 事件emit/on
-* privide/inject
+* privide/inject  跨层级传参
 * eventBus 事件总线
 * vuex
 * $roots
-* $parents
+* $parent
+* $children
+* refs
+* $attrs 非props属性
+* $listeners 子组件通过v-on="$listensers", 处理父元素传进来的时间
+
+#### 

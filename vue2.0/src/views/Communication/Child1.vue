@@ -1,7 +1,7 @@
 <template>
     <div class="border">
-        <h3>Child1</h3>
-        <button>通知child2变化</button>
+        <h3 v-on="$listeners">Child1</h3>
+        <button @click="handleClick">通知child2变化</button>
         <sub-child></sub-child>
     </div>
 </template>
@@ -9,20 +9,32 @@
 <script>
 import SubChild from './SubChild.vue'
 export default {
-    props: {},
-    data() {
-        return {};
-    },
-    components: {SubChild},
-    computed: {},
-    created() {},
-    mounted() {
-        console.log(this.$attrs);
-        console.log(this.$listeners);
-    },
-    methods: {}
+  components: {SubChild},
+  props: {},
+
+  data() {
+      return {};
+  },
+
+  computed: {
+      
+  },
+  created() {
+    console.log(this.$attrs);
+  },
+  mounted() {
+      console.log(this.$attrs);
+      console.log(this.$listeners);
+  },
+
+  methods: {
+      handleClick() {
+          this.$parent.$emit('child1', 'msg')
+      }
+  }
 };
 </script>
+
 <style lang="less">
     .border {
         padding: 10px;

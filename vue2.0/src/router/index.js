@@ -5,6 +5,7 @@ import Vue from "vue";
 import Router from '@src/views/router';
 const Home = () => import(/* webpackChunkName: "home" */ '@src/views/home')
 const Communication = () => import(/* webpackChunkName: "Communication" */ '@src/views/Communication')
+const From = () => import(/* webpackChunkName: "From" */ '@src/views/Form')
 // 安装路由插件
 Vue.use(VueRouter);
 
@@ -25,6 +26,11 @@ let routes = [
         path: '/comunicaiton',
         title: '组件通信',
         component: Communication
+    },
+    {
+        path: '/form',
+        title: '组件通信',
+        component: From
     },
     {
         path: '/', 
