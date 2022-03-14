@@ -6,6 +6,7 @@
 
 function compose(arr) {
     function composeTwo(arr1, arr2) {
+        console.log(arr1, arr2)
         if(arr1.length === 0) {
             return arr1;
         }
@@ -23,8 +24,8 @@ function compose(arr) {
         return res;
     }
 
-    return arr.reduce((a,b) => composeTwo(a, b), []);
+    return arr.reduce((a,b) => composeTwo(a, b));
 }
 
-console.log(compose([[ 'Aa', 'Ab', 'Ba', 'Bb' ], [1, 2, 3, 4]]));
+console.log(compose([['A', 'B'], ['a', 'b'], [1, 2, 3, 4]]));
 

@@ -32,7 +32,7 @@ npm install --save-dev babel-loader @babel/core @babel/preset-env @babel/plugin-
 
 * babel 默认转换语法 let, class, =>
 
-* babel 转换api需要配置 includes,Promise,map
+* babel 转换api需要配置 includes, Promise, map
 
   ```
   //  
